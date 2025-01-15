@@ -1,0 +1,101 @@
+:root {
+  font-family: Roboto, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 500;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+body { 
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*  mobile view */
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: auto;
+  background-color: #E0E0E0;
+}
+
+
+.page__mobile-view {
+  display: block;
+}
+
+.page__desktop-view {
+  display: none;
+}
+
+.page__container {
+  flex: 1;
+  background-color:white;
+  height: 100%;
+  display: flex;
+}
+
+.page__content {
+  overflow: hidden;
+  margin-bottom: 24px;
+
+  &:hover {
+    overflow: auto;
+  }
+}
+
+.header__item  {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Tablet view:  change this to 768px */
+@media (min-width: 320px) {
+  .page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 48px;
+    overflow: auto;
+    background-color: #E0E0E0;
+  }
+  
+  .page__container {
+    flex: 1;
+    background-color:white;
+    height: 100%;
+    border-radius: 24px;
+    display: flex;
+  }
+}
+
+
+/* Desktop view: change this to 1440px */
+@media (min-width: 768px) {
+  .page__mobile-view {
+    display: none;
+  }
+
+  .page__desktop-view {
+    display: grid;
+    grid-template-columns: 1fr 352px;
+    grid-auto-rows: auto;
+    flex: 1;
+    min-height: 0;
+  }
+}
