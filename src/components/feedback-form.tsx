@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Input, Textarea } from "./form";
-import { Submit } from "./form/submit";
+import { Input, Submit, Textarea } from "./form";
 
 export const FeedbackForm = () => {
   const [isValid, setIsValid] = useState(false);
