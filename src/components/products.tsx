@@ -1,75 +1,55 @@
 import { AirplaneIcon, HelicopterIcon, RocketIcon, UFOIcon } from "../assets";
-import { Product, ProductProps } from "../types";
+import { ProductCard, ProductProps } from "./product-card";
 
-const products: Product[] = [
+const products: ProductProps[] = [
   {
     name: "myProduct",
-    color: "Sunny Orange",
-    bgColor: "#FFF6CE",
-    textColor: "#E76101",
-    icon: HelicopterIcon,
+    variant: "orange",
+    Icon: HelicopterIcon,
   },
   {
     name: "myProduct Plus",
-    color: "Deep Blue",
-    bgColor: "#A2D7E7",
-    textColor: "#0465AC",
-    icon: RocketIcon,
+    variant: "blue",
+    Icon: RocketIcon,
   },
   {
     name: "myProduct Pro",
-    color: "Floral Green",
-    bgColor: "#ADEDB3",
-    textColor: "#018D31",
-    icon: UFOIcon,
+    variant: "green",
+    Icon: UFOIcon,
   },
   {
     name: "myProduct Ultra",
-    color: "Interstellar Grey",
-    bgColor: "#46454A",
-    textColor: "#FFF",
-    icon: AirplaneIcon,
+    variant: "grey",
+    Icon: AirplaneIcon,
   },
   {
     name: "myProduct",
-    color: "Sunny Orange",
-    bgColor: "#FFF6CE",
-    textColor: "#E76101",
-    icon: HelicopterIcon,
-  },
-  {
-    name: "myProduct Plus",
-    color: "Deep Blue",
-    bgColor: "#A2D7E7",
-    textColor: "#0465AC",
-    icon: RocketIcon,
+    variant: "orange",
+    Icon: RocketIcon,
   },
   {
     name: "myProduct Pro",
-    color: "Floral Green",
-    bgColor: "#ADEDB3",
-    textColor: "#018D31",
-    icon: UFOIcon,
+    variant: "green",
+    Icon: UFOIcon,
   },
+  // Uncomment the following lines to see the grid with more products
+  // {
+  //   name: "myProduct Ultra",
+  //   variant: "grey",
+  //   Icon: HelicopterIcon,
+  // },
+  // {
+  //   name: "myProduct",
+  //   variant: "orange",
+  //   Icon: HelicopterIcon,
+  // },
 ];
-
-const ProductCard = ({ product }: ProductProps) => (
-  <div
-    key={product.name}
-    className="product-card"
-    style={{ backgroundColor: product.bgColor, color: product.textColor }}
-  >
-    {<product.icon />}
-    <h3 className="product-card__name">{product.name}</h3>
-    <p className="product-card__color">{product.color}</p>
-  </div>
-);
 
 export const Products = () => (
   <div className="page__content">
     <div className="product-grid">
-      {products.map((product) => (
-        <ProductCard key={product.name} product={product} />
+      {products.map((product, index) => (
+        <ProductCard key={index} {...product} />
       ))}
     </div>
   </div>
