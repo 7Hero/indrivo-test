@@ -31,5 +31,5 @@ export const TabContent = ({
   index,
 }: PropsWithChildren<{ index: number }>) => {
   const { activeTab } = useTabs();
-  return activeTab === index && <div>{children}</div>;
+  return activeTab === index && <>{children};</>;
 };
