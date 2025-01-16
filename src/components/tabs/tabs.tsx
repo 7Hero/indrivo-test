@@ -1,5 +1,7 @@
 import { PropsWithChildren, useState } from "react";
-import { TabsContext, useTabs } from "./context";
+import { TabsContext, useTabs } from "./tabs.context";
+
+import "./tabs.css";
 
 export const Tabs = ({ children }: PropsWithChildren) => {
   const [activeTab, setActiveTab] = useState(0);
@@ -31,5 +33,5 @@ export const TabContent = ({
   index,
 }: PropsWithChildren<{ index: number }>) => {
   const { activeTab } = useTabs();
-  return activeTab === index && <>{children};</>;
+  return activeTab === index && <>{children}</>;
 };

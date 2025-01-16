@@ -49,7 +49,8 @@ p {
 }
 
 .page__mobile-view {
-  display: block;
+  display: flex;
+  flex-direction: column;
   flex: 1;
 }
 
@@ -72,66 +73,10 @@ p {
   border-bottom: 1px solid #ededed;
 }
 
-.tabs {
-  display: flex;
-  background-color: #f8f8f8;
-}
-
-.tabs__tab {
-  flex: 1;
-  border: none;
-  text-decoration: none;
-  display: inline-block;
-  cursor: pointer;
-  position: relative;
-  background-color: white;
-
-  &:first-child > .tabs__tab-label {
-    border-radius: 0 0 16px 0;
-  }
-  &:last-child > .tabs__tab-label {
-    border-radius: 0 0 0 16px;
-  }
-
-}
-
-.tabs__tab > .tabs__tab-label {
-  padding: 20px;
-  text-align: center;
-  font-size: 20px;
-  line-height: 24px;
-  font-weight: 400;
-  background-color: #f8f8f8;
-}
-
-.tabs__tab-label:hover {
-  color: #0063BE;
-  text-decoration:underline dotted;
-}
-
-.tabs__tab--active {
-  background-color: #f8f8f8;
-
-  &:first-child > .tabs__tab-label {
-    border-radius: 0 16px 0 0;
-  }
-  &:last-child > .tabs__tab-label {
-    border-radius: 16px 0 0 0;
-  }
-
-  & > .tabs__tab-label {
-    background-color: white;
-    font-weight: 600;
-    color: black;
-    text-decoration: none;
-  }
-
-}
-
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(288px,1fr));
-  gap: 16px;
+  gap: 32px;
   padding: 32px;
 }
 
