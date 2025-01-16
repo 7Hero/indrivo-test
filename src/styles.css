@@ -75,10 +75,6 @@ p {
   border-bottom: 1px solid #ededed;
 }
 
-.header__item--right, .page__content--right {
-  background-color: #f8f8f8;
-}
-
 .tabs {
   display: flex;
   background-color: #f8f8f8;
@@ -169,5 +165,9 @@ p {
     grid-auto-rows: min-content 1fr;
     flex: 1;
     box-shadow: 0px 1px 4px 0px #0000000D;
+  }
+
+  .header__item--feedback, .page__content--feedback {
+    background-color: #f8f8f8;
   }
 }

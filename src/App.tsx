@@ -13,26 +13,20 @@ export const App = () => (
             <Tab index={0} label="Products" />
             <Tab index={1} label="Feedback" />
           </TabList>
-          <div className="page__content">
-            <TabContent index={0}>
-              <Products />
-            </TabContent>
-            <TabContent index={1}>
-              <FeedbackForm />
-            </TabContent>
-          </div>
+          <TabContent index={0}>
+            <Products />
+          </TabContent>
+          <TabContent index={1}>
+            <FeedbackForm />
+          </TabContent>
         </Tabs>
       </div>
       {/* Desktop view */}
       <div className="page__desktop-view">
         <div className="header__item">Products</div>
-        <div className="header__item header__item--right">Feedback</div>
-        <div className="page__content">
-          <Products />
-        </div>
-        <div className="page__content page__content--right">
-          <FeedbackForm />
-        </div>
+        <div className="header__item header__item--feedback">Feedback</div>
+        <Products />
+        <FeedbackForm />
       </div>
     </div>
   </div>
