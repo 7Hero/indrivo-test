@@ -74,6 +74,13 @@ p {
   border-bottom: 1px solid #ededed;
 }
 
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 32px;
+}
+
 /* Tablet view */
 @media (min-width: 768px) {
   .page {
